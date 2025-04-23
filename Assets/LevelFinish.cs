@@ -16,7 +16,7 @@ public class LevelFinish : MonoBehaviour
     void Update()
     {
         if(player1IsFinish&&player2IsFinish){
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Game2");
         }
     }
 
