@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Blæser : MonoBehaviour
 {
-    public Vector3 pushDirection = Vector3.right; //retning
+    public Vector2 pushDirection = Vector2.right;
     public float pushForce = 10f;
 
 
@@ -19,14 +19,14 @@ public class Blæser : MonoBehaviour
         
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player1")) // Sørg for din spiller har tagget "Player1"
+        if (other.CompareTag("Player1"))
         {
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.AddForce(pushDirection.normalized * pushForce, ForceMode.Force);
+                rb.AddForce(pushDirection.normalized * pushForce);
             }
         }
     }
