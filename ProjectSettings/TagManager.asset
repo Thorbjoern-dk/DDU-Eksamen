@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Player1
+  - Player2
+  - "D\xF8rTrigger"
+  - Box
   layers:
   - Default
   - TransparentFX
