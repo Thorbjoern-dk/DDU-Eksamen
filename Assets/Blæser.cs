@@ -21,12 +21,21 @@ public class Blæser : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player1"))
+        if (other.CompareTag("Player1")||other.CompareTag("Box"))
         {
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
                 rb.AddForce(pushDirection.normalized * pushForce);
+            }
+        }
+        
+        if (other.CompareTag("Player2"))
+        {
+            Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.AddForce(pushDirection.normalized * pushForce * 2);
             }
         }
     }
