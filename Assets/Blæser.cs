@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Blæser : MonoBehaviour
 {
-    public Vector3 pushDirection = Vector3.right;
+    public Vector3 pushDirection = Vector3.right; //retning
     public float pushForce = 10f;
 
 
