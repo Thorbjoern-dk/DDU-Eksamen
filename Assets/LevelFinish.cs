@@ -6,6 +6,8 @@ public class LevelFinish : MonoBehaviour
     bool player1IsFinish;
     bool player2IsFinish;
 
+    public string LevelName;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +18,7 @@ public class LevelFinish : MonoBehaviour
     void Update()
     {
         if(player1IsFinish&&player2IsFinish){
-            SceneManager.LoadScene("Game2");
+            SceneManager.LoadScene(LevelName);
         }
     }
 
