@@ -19,9 +19,9 @@ public class Blæser : MonoBehaviour
     void Update()
     {
         if(flip){
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -90);
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
         } else{
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 90);
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180);
         }
     }
 
@@ -33,9 +33,9 @@ public class Blæser : MonoBehaviour
             if (rb != null)
             {
                 if(flip){
-                    rb.AddForce(pushDirection.normalized * pushForce * -1);
+                    rb.AddForce(pushDirection.normalized * pushForce * -4);
                 } else{
-                    rb.AddForce(pushDirection.normalized * pushForce);
+                    rb.AddForce(pushDirection.normalized * pushForce * 4);
                 }
             }
         }
@@ -46,10 +46,10 @@ public class Blæser : MonoBehaviour
             if (rb != null)
             {
                 if(flip){
-                    rb.AddForce(pushDirection.normalized * pushForce * -2);
+                    rb.AddForce(pushDirection.normalized * pushForce * -4);
                 } else{
-                    rb.AddForce(pushDirection.normalized * pushForce);
-                }n
+                    rb.AddForce(pushDirection.normalized * pushForce * 4);
+                }
             }
         }
     }
