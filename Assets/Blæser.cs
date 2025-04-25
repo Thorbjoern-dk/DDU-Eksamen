@@ -49,7 +49,7 @@ public class Blæser : MonoBehaviour
                     rb.AddForce(pushDirection.normalized * pushForce * -2);
                 } else{
                     rb.AddForce(pushDirection.normalized * pushForce);
-                }n
+                }
             }
         }
     }
