@@ -293,7 +293,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1564,6 +1564,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &494131074
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6890019561908093941, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_Name
+      value: "MenneskeD\xF8r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0976017
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.0601206
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028404485515042585, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
 --- !u!1 &513011348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,7 +1832,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1919,67 +1976,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &683155239
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.6447005
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.0145888
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824030531852293013, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8750618800218022589, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
-      propertyPath: m_Name
-      value: "MenneskeD\xF8r"
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 19a2fa662b85cfc449060fe55709a4e9, type: 3}
 --- !u!1 &791257625
 GameObject:
   m_ObjectHideFlags: 0
@@ -4231,7 +4227,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 0.5169811, g: 0.5169811, b: 0.5169811, a: 1}
+  m_Color: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4539,7 +4535,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4987,7 +4983,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5446,4 +5442,4 @@ SceneRoots:
   - {fileID: 886181861}
   - {fileID: 435374918}
   - {fileID: 188474320}
-  - {fileID: 683155239}
+  - {fileID: 494131074}
