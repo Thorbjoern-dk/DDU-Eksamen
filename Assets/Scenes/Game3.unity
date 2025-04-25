@@ -395,8 +395,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292d2918ba3b654458659bbc8672cd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushDirection: {x: 0, y: 1}
+  pushDirection: {x: 1, y: 0}
   pushForce: 40
+  flip: 0
 --- !u!212 &186655162
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2617,6 +2618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "D\xF8r1": {fileID: 342747191}
   "D\xF8r2": {fileID: 342747191}
+  RotateBlower: 0
+  Blower: {fileID: 0}
 --- !u!212 &897592200
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2855,6 +2858,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "D\xF8r1": {fileID: 342747191}
   "D\xF8r2": {fileID: 342747191}
+  RotateBlower: 0
+  Blower: {fileID: 0}
 --- !u!212 &1101554676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3455,6 +3460,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "D\xF8r1": {fileID: 342747191}
   "D\xF8r2": {fileID: 342747191}
+  RotateBlower: 1
+  Blower: {fileID: 186655161}
 --- !u!212 &1254475602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3500,7 +3507,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 0.5169811, g: 0.5169811, b: 0.5169811, a: 1}
+  m_Color: {r: 0.3754716, g: 1, b: 0.5648515, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4182,6 +4189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "D\xF8r1": {fileID: 342747191}
   "D\xF8r2": {fileID: 342747191}
+  RotateBlower: 0
+  Blower: {fileID: 0}
 --- !u!212 &1660738417
 SpriteRenderer:
   m_ObjectHideFlags: 0
