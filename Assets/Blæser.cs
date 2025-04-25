@@ -7,21 +7,23 @@ public class Blæser : MonoBehaviour
 
     public bool flip;
 
+    public float StartRot;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if(flip){
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0);
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0+StartRot);
         } else{
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180);
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180+StartRot);
         }
     }
 
