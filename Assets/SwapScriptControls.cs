@@ -42,7 +42,7 @@ public class SwapScriptControls : MonoBehaviour
             {
                 TrySwitchCharacter(2, A2);
             }
-            else if (Input.GetKeyDown(KeyCode.Minus))
+            else if (Input.GetKeyDown("-"))
             {
                 Debug.Log("fuck dig thorbjørn");
                 TrySwitchCharacter(2, A3);

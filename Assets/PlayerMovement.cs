@@ -68,8 +68,10 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
         
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded && IsPlayer1)
         {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        } else if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded && IsPlayer1 == false){
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
