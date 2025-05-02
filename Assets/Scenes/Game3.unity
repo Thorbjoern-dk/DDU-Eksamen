@@ -2439,7 +2439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4259467351069571881, guid: 1ddb01dc6dbbd5d479cea06651724b98, type: 3}
       propertyPath: m_LocalScale.x
-      value: 25.894304
+      value: 25.748692
       objectReference: {fileID: 0}
     - target: {fileID: 4259467351069571881, guid: 1ddb01dc6dbbd5d479cea06651724b98, type: 3}
       propertyPath: m_LocalScale.y
@@ -2447,7 +2447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4259467351069571881, guid: 1ddb01dc6dbbd5d479cea06651724b98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8881
+      value: 2.9604
       objectReference: {fileID: 0}
     - target: {fileID: 4259467351069571881, guid: 1ddb01dc6dbbd5d479cea06651724b98, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4888,7 +4888,7 @@ GameObject:
   - component: {fileID: 1902317583}
   - component: {fileID: 1902317582}
   - component: {fileID: 1902317581}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BoxPlayer
   m_TagString: Box
   m_Icon: {fileID: 0}
