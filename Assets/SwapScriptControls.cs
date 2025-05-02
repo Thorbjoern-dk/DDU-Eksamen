@@ -21,11 +21,8 @@ public class SwapScriptControls : MonoBehaviour
 
     void Update()
     {
-        // Player 1 input (Venstre Shift)
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
+        // Player 1 input
+        if (Input.GetKeyDown(KeyCode.Alpha1)){
                 TrySwitchCharacter(1, A1);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -35,24 +32,20 @@ public class SwapScriptControls : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 TrySwitchCharacter(1, A3);
-            }
         }
 
-        // Player 2 input (Højre Shift)
-        if (Input.GetKey(KeyCode.RightShift))
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
+        // Player 2 input
+        if (Input.GetKeyDown(KeyCode.Comma)){
                 TrySwitchCharacter(2, A1);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            else if (Input.GetKeyDown(KeyCode.Period))
             {
                 TrySwitchCharacter(2, A2);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            else if (Input.GetKeyDown("-"))
             {
+                Debug.Log("fuck dig thorbjørn");
                 TrySwitchCharacter(2, A3);
-            }
         }
     }
 
