@@ -35,16 +35,15 @@ public class SwapScriptControls : MonoBehaviour
         }
 
         // Player 2 input
-        if (Input.GetKeyDown(KeyCode.Comma)){
+        if (Input.GetKeyDown(KeyCode.I)){
                 TrySwitchCharacter(2, A1);
             }
-            else if (Input.GetKeyDown(KeyCode.Period))
+            else if (Input.GetKeyDown(KeyCode.O))
             {
                 TrySwitchCharacter(2, A2);
             }
-            else if (Input.GetKeyDown("-"))
+            else if (Input.GetKeyDown(KeyCode.P))
             {
-                Debug.Log("fuck dig thorbjørn");
                 TrySwitchCharacter(2, A3);
         }
     }
