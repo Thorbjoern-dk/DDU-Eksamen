@@ -129,9 +129,9 @@ TextureImporter:
       name: Untitled_Artwork-6_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 26
         y: 27
-        width: 60
+        width: 41
         height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
