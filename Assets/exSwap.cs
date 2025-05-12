@@ -6,6 +6,9 @@ public class ExSwapScriptControls : MonoBehaviour
     public GameObject A2; // Ghost
     public GameObject A3; // Box
 
+    public GameObject player1soul;
+    public GameObject player2soul;
+
     private GameObject player1Character;
     private GameObject player2Character;
 
@@ -13,9 +16,11 @@ public class ExSwapScriptControls : MonoBehaviour
 
     void Start()
     {
-        // Start med A1 og A2 som aktive spillere
-        player1Character = A1;
-        player2Character = A2;
+        player1Character = null;
+        player2Character = null;
+
+        player1soul.SetActive(false);
+        player2soul.SetActive(false);
 
         UpdateCharacterActiveStates();
         InGameOutGameTjek();
@@ -23,38 +28,42 @@ public class ExSwapScriptControls : MonoBehaviour
 
     void Update()
     {
+        string slots = ard.GetLatestData();
         // Player 1 input
-        if (ard.slots != null && ard.slots.Length >= 3)
+        if (slots[0] == '1')
         {
-            if (ard.slots[0] == '1')
-            {
-                TrySwitchCharacter(1, A1);
-            }
-            else if (ard.slots[1] == '1')
-            {
-                TrySwitchCharacter(1, A2);
-            }
-            else if (ard.slots[2] == '1')
-            {
-                TrySwitchCharacter(1, A3);
-            }
+            TrySwitchCharacter(1, A1);
+        }
+        else if (slots[1] == '1')
+        {
+            TrySwitchCharacter(1, A2);
+        }
+        else if (slots[2] == '1')
+        {
+            TrySwitchCharacter(1, A3);
+        }
+        else
+        {
+            SpillerSoul(1);
         }
 
         // Player 2 input
-        if (ard.slots != null && ard.slots.Length >= 3)
+
+        if (slots[0] == '2')
         {
-            if (ard.slots[0] == '2')
-            {
-                TrySwitchCharacter(2, A1);
-            }
-            else if (ard.slots[1] == '2')
-            {
-                TrySwitchCharacter(2, A2);
-            }
-            else if (ard.slots[2] == '2')
-            {
-                TrySwitchCharacter(2, A3);
-            }
+            TrySwitchCharacter(2, A1);
+        }
+        else if (slots[1] == '2')
+        {
+            TrySwitchCharacter(2, A2);
+        }
+        else if (slots[2] == '2')
+        {
+            TrySwitchCharacter(2, A3);
+        }
+        else
+        {
+            SpillerSoul(2);
         }
     }
 
@@ -63,12 +72,17 @@ public class ExSwapScriptControls : MonoBehaviour
         GameObject currentCharacter = (playerNumber == 1) ? player1Character : player2Character;
         GameObject otherCharacter = (playerNumber == 1) ? player2Character : player1Character;
 
-        if (targetCharacter == currentCharacter) return; // Allerede denne karakter
+        if (targetCharacter == null) return; // stadig en sikring
+
+        if (targetCharacter == currentCharacter) return;
 
         if (targetCharacter == otherCharacter)
         {
             // BYT karakterer
-            SwapCharacters(currentCharacter, otherCharacter);
+            if (currentCharacter != null) // kun swap hvis begge eksisterer
+            {
+                SwapCharacters(currentCharacter, otherCharacter);
+            }
 
             if (playerNumber == 1)
             {
@@ -83,24 +97,35 @@ public class ExSwapScriptControls : MonoBehaviour
         }
         else
         {
-            // SKIFT til en inaktiv karakter
-            Vector3 tempPos = currentCharacter.transform.position;
-            currentCharacter.transform.position = targetCharacter.transform.position;
-            targetCharacter.transform.position = tempPos;
+            Vector3 spawnPos;
+
+            if (currentCharacter != null)
+            {
+                spawnPos = currentCharacter.transform.position;
+            }
+            else
+            {
+                spawnPos = (playerNumber == 1) ? player1soul.transform.position : player2soul.transform.position;
+            }
+
+            targetCharacter.transform.position = spawnPos;
 
             if (playerNumber == 1)
             {
                 player1Character = targetCharacter;
+                player1soul.SetActive(false);
             }
             else
             {
                 player2Character = targetCharacter;
+                player2soul.SetActive(false);
             }
         }
 
         InGameOutGameTjek();
         UpdateCharacterActiveStates();
     }
+
 
     void SwapCharacters(GameObject char1, GameObject char2)
     {
@@ -115,6 +140,31 @@ public class ExSwapScriptControls : MonoBehaviour
         A2.SetActive(player1Character == A2 || player2Character == A2);
         A3.SetActive(player1Character == A3 || player2Character == A3);
     }
+
+    void SpillerSoul(int playerNumber)
+    {
+        if (playerNumber == 1)
+        {
+            if (player1Character != null)
+            {
+                player1soul.transform.position = player1Character.transform.position;
+                player1Character.SetActive(false);
+                player1Character = null;
+            }
+            player1soul.SetActive(true);
+        }
+        else
+        {
+            if (player2Character != null)
+            {
+                player2soul.transform.position = player2Character.transform.position;
+                player2Character.SetActive(false);
+                player2Character = null;
+            }
+            player2soul.SetActive(true);
+        }
+    }
+
 
     void InGameOutGameTjek()
     {
@@ -151,8 +201,5 @@ public class ExSwapScriptControls : MonoBehaviour
         {
             a2Movement.InGame = false;
         }
-
-        // A3 har ingen kontrol-script i denne kode, så vi antager den ikke styres direkte
-        // Hvis A3 også skal have `InGame` fx i et "BoxMovement"-script, kan du tilføje det her.
     }
 }
