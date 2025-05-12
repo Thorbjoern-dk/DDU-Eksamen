@@ -4,6 +4,8 @@ using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
+
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public Transform groundCheck;
@@ -29,10 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //if(view.IsMine){
-            //Move();
-            //Jump();
-        //}
+        
         Move();
         Jump();
         
@@ -45,8 +44,14 @@ public class PlayerMovement : MonoBehaviour
         float moveInput;
         if(IsPlayer1){
             moveInput = Input.GetAxis("Horizontal");
+            if(InGame){
+                animator.SetFloat("Movement", Mathf.Abs(Input.GetAxis("Horizontal")));
+            }
         } else{
             moveInput = Input.GetAxis("Horizontal2");
+            if(InGame){
+                animator.SetFloat("Movement", Mathf.Abs(Input.GetAxis("Horizontal2")));
+            }
         }
         
         if(InGame){
@@ -60,9 +65,9 @@ public class PlayerMovement : MonoBehaviour
         
 
         if(moveInput>0f){ //vend den rigtige retning
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        } else if(moveInput<0f){
             transform.rotation = Quaternion.Euler(0, 180, 0);
+        } else if(moveInput<0f){
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
