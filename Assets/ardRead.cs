@@ -1,39 +1,55 @@
-using UnityEngine;
 using System.IO.Ports;
+using System.Threading;
+using UnityEngine;
+
 public class ArdRead : MonoBehaviour
 {
-    [SerializeField] string port = "COM14";
-    SerialPort stream;
-
-    public char[] slots;
-    public string serial_input;
+    private SerialPort stream;
+    private Thread readThread;
+    private string latestData = "000";
+    private bool running;
 
     void Start()
     {
-        stream = new(port, 9600)
-        {
-            WriteTimeout = 500,
-            ReadTimeout = 1000,
-            DtrEnable = true,
-            RtsEnable = true
-        };
+        stream = new SerialPort("COM14", 9600);
+        stream.ReadTimeout = 1000;
         stream.Open();
+
+        running = true;
+        readThread = new Thread(ReadFromArduino);
+        readThread.Start();
     }
 
-    void Update()
+    private void ReadFromArduino()
     {
-        try
+        while (running)
         {
-            serial_input = stream.ReadLine();
-            slots = serial_input.ToCharArray();
-        }
-        catch (System.TimeoutException)
-        {
-            // Debug.Log("Serial input timeout");
+            try
+            {
+                string line = stream.ReadLine().Trim();
+                lock (this)
+                {
+                    latestData = line;
+                }
+            }
+            catch (System.Exception) { }
         }
     }
-    void OnDisable()
+
+    public string GetLatestData()
     {
-        stream.Close();
+        lock (this)
+        {
+            return latestData;
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        running = false;
+        if (readThread != null && readThread.IsAlive)
+            readThread.Join();
+        if (stream != null && stream.IsOpen)
+            stream.Close();
     }
 }
