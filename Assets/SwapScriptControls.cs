@@ -114,13 +114,11 @@ public class SwapScriptControls : MonoBehaviour
         {
             a1Movement.IsPlayer1 = true;
             a1Movement.InGame = true;
-        }
-        else if (player2Character == A1)
+        } else if (player2Character == A1)
         {
             a1Movement.IsPlayer1 = false;
             a1Movement.InGame = true;
-        }
-        else
+        } else
         {
             a1Movement.InGame = false;
         }
@@ -131,18 +129,13 @@ public class SwapScriptControls : MonoBehaviour
         {
             a2Movement.IsPlayer1 = true;
             a2Movement.InGame = true;
-        }
-        else if (player2Character == A2)
+        } else if (player2Character == A2)
         {
             a2Movement.IsPlayer1 = false;
             a2Movement.InGame = true;
-        }
-        else
+        } else
         {
             a2Movement.InGame = false;
         }
-
-        // A3 har ingen kontrol-script i denne kode, så vi antager den ikke styres direkte
-        // Hvis A3 også skal have `InGame` fx i et "BoxMovement"-script, kan du tilføje det her.
     }
 }
