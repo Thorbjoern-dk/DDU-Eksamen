@@ -21,7 +21,7 @@ TagManager:
   - "Mennesked\xF8r"
   - "Ark\xE6olog"
   - NoBox
-  - 
+  - Baggrund
   - 
   - 
   - 
@@ -42,8 +42,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Baggrund
+    uniqueID: 403966273
+    locked: 0
+  - name: Mellemgrund
+    uniqueID: 3277165743
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Forgrund
+    uniqueID: 1568753023
     locked: 0
   m_RenderingLayers:
   - Default
