@@ -23,16 +23,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
-        view = GetComponent<PhotonView>();
+        //view = GetComponent<PhotonView>();
     }
 
 
     void Update()
     {
-        if(view.IsMine){
-            Move();
-            Jump();
-        }
+        //if(view.IsMine){
+            //Move();
+            //Jump();
+        //}
+        Move();
+        Jump();
         
 
 
