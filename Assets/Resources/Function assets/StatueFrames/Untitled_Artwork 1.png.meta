@@ -129,10 +129,10 @@ TextureImporter:
       name: Untitled_Artwork 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 34
         y: 0
-        width: 128
-        height: 128
+        width: 56
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Untitled_Artwork 1_0: 8416243949045666254
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
