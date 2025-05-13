@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
+    public BoxCollider2D bc;
+
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -46,12 +48,16 @@ public class PlayerMovement : MonoBehaviour
             moveInput = Input.GetAxis("Horizontal");
             if(InGame){
                 animator.SetFloat("Movement", Mathf.Abs(Input.GetAxis("Horizontal")));
+                animator.SetBool("IsPlayer1", true);
             }
+            bc.size = new Vector2(bc.size.x, 0.87f);
         } else{
             moveInput = Input.GetAxis("Horizontal2");
             if(InGame){
                 animator.SetFloat("Movement", Mathf.Abs(Input.GetAxis("Horizontal2")));
+                animator.SetBool("IsPlayer1", false);
             }
+            bc.size = new Vector2(bc.size.x, 1.1f);
         }
         
         if(InGame){

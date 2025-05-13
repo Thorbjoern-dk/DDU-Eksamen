@@ -5,7 +5,7 @@ using Photon.Pun;
 public class ChostMovement : MonoBehaviour
 {
 
-
+    public Animator animator;
     public float MoveSpeed;
 
     private Rigidbody2D rb;
@@ -33,9 +33,11 @@ public class ChostMovement : MonoBehaviour
         if(IsPlayer1){
             moveXInput = Input.GetAxis("Horizontal")*MoveSpeed*Time.deltaTime;
             moveYInput = Input.GetAxis("Vertical")*MoveSpeed*Time.deltaTime;
+            animator.SetBool("IsPlayer1", true);
         } else{
             moveXInput = Input.GetAxis("Horizontal2")*MoveSpeed*Time.deltaTime;
             moveYInput = Input.GetAxis("Vertical2")*MoveSpeed*Time.deltaTime;
+            animator.SetBool("IsPlayer1", false);
         }
         if(InGame){
             rb.linearVelocity = new Vector2(moveXInput, moveYInput);
@@ -47,9 +49,9 @@ public class ChostMovement : MonoBehaviour
         }
         
         if(moveXInput>0){
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        } else if (moveXInput<0){
             transform.rotation = Quaternion.Euler(0, 180, 0);
+        } else if (moveXInput<0){
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
     }
