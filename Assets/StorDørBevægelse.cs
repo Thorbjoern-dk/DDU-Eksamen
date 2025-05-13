@@ -18,11 +18,6 @@ public class StorDørBevægelse : MonoBehaviour
 
     void Update()
     {
-        // Midlertidig test: Tryk på E for at toggle døren
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            skalÅbnes = !skalÅbnes;
-        }
 
         FlytDør();
     }
