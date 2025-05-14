@@ -16,11 +16,12 @@ public class ExSwapScriptControls : MonoBehaviour
 
     void Start()
     {
+        // Sørg for at soul-objekter er aktive i starten, så vi kender deres position
+        player1soul.SetActive(true);
+        player2soul.SetActive(true);
+
         player1Character = null;
         player2Character = null;
-
-        player1soul.SetActive(false);
-        player2soul.SetActive(false);
 
         UpdateCharacterActiveStates();
         InGameOutGameTjek();
@@ -29,42 +30,18 @@ public class ExSwapScriptControls : MonoBehaviour
     void Update()
     {
         string slots = ard.GetLatestData();
+
         // Player 1 input
-        if (slots[0] == '1')
-        {
-            TrySwitchCharacter(1, A1);
-        }
-        else if (slots[1] == '1')
-        {
-            TrySwitchCharacter(1, A2);
-        }
-        else if (slots[2] == '1')
-        {
-            TrySwitchCharacter(1, A3);
-        }
-        else
-        {
-            SpillerSoul(1);
-        }
+        if (slots[0] == '1') TrySwitchCharacter(1, A1);
+        else if (slots[1] == '1') TrySwitchCharacter(1, A2);
+        else if (slots[2] == '1') TrySwitchCharacter(1, A3);
+        else SpillerSoul(1);
 
         // Player 2 input
-
-        if (slots[0] == '2')
-        {
-            TrySwitchCharacter(2, A1);
-        }
-        else if (slots[1] == '2')
-        {
-            TrySwitchCharacter(2, A2);
-        }
-        else if (slots[2] == '2')
-        {
-            TrySwitchCharacter(2, A3);
-        }
-        else
-        {
-            SpillerSoul(2);
-        }
+        if (slots[0] == '2') TrySwitchCharacter(2, A1);
+        else if (slots[1] == '2') TrySwitchCharacter(2, A2);
+        else if (slots[2] == '2') TrySwitchCharacter(2, A3);
+        else SpillerSoul(2);
     }
 
     void TrySwitchCharacter(int playerNumber, GameObject targetCharacter)
@@ -72,14 +49,12 @@ public class ExSwapScriptControls : MonoBehaviour
         GameObject currentCharacter = (playerNumber == 1) ? player1Character : player2Character;
         GameObject otherCharacter = (playerNumber == 1) ? player2Character : player1Character;
 
-        if (targetCharacter == null) return; // stadig en sikring
-
+        if (targetCharacter == null) return;
         if (targetCharacter == currentCharacter) return;
 
         if (targetCharacter == otherCharacter)
         {
-            // BYT karakterer
-            if (currentCharacter != null) // kun swap hvis begge eksisterer
+            if (currentCharacter != null)
             {
                 SwapCharacters(currentCharacter, otherCharacter);
             }
@@ -97,16 +72,10 @@ public class ExSwapScriptControls : MonoBehaviour
         }
         else
         {
-            Vector3 spawnPos;
-
-            if (currentCharacter != null)
-            {
-                spawnPos = currentCharacter.transform.position;
-            }
-            else
-            {
-                spawnPos = (playerNumber == 1) ? player1soul.transform.position : player2soul.transform.position;
-            }
+            // Brug soulens position som spawnpunkt
+            Vector3 spawnPos = (playerNumber == 1)
+                ? player1soul.transform.position
+                : player2soul.transform.position;
 
             targetCharacter.transform.position = spawnPos;
 
@@ -122,10 +91,18 @@ public class ExSwapScriptControls : MonoBehaviour
             }
         }
 
+        // Reset animator
+        Animator anim = targetCharacter.GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.Rebind();         // Nulstil binding
+            anim.Update(0f);       // Force update
+            anim.Play("Idle", 0);  // Force den til Idle på layer 0
+        }
+
         InGameOutGameTjek();
         UpdateCharacterActiveStates();
     }
-
 
     void SwapCharacters(GameObject char1, GameObject char2)
     {
@@ -165,10 +142,8 @@ public class ExSwapScriptControls : MonoBehaviour
         }
     }
 
-
     void InGameOutGameTjek()
     {
-        // A1 - Arkæolog
         PlayerMovement a1Movement = A1.GetComponent<PlayerMovement>();
         if (player1Character == A1)
         {
@@ -185,7 +160,6 @@ public class ExSwapScriptControls : MonoBehaviour
             a1Movement.InGame = false;
         }
 
-        // A2 - Ghost
         ChostMovement a2Movement = A2.GetComponent<ChostMovement>();
         if (player1Character == A2)
         {
