@@ -11,7 +11,8 @@ public class LevelFinish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player1IsFinish&&player2IsFinish){
+        if(player1IsFinish&&player2IsFinish)
+        {
             SceneManager.LoadScene(LevelName);
         }
     }
