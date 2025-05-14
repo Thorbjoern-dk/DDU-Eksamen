@@ -33,10 +33,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
         Move();
         Jump();
-        
+        // Debug animation
+        var clips = animator.GetCurrentAnimatorClipInfo(0);
+        if (clips.Length > 0)
+        {
+            Debug.Log("Aktiv animation: " + clips[0].clip.name);
+        }
 
 
     }

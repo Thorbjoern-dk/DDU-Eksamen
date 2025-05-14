@@ -9,9 +9,11 @@ public class ArdRead : MonoBehaviour
     private string latestData = "000";
     private bool running;
 
+    public string PortName;
+
     void Start()
     {
-        stream = new SerialPort("COM14", 9600);
+        stream = new SerialPort(PortName, 9600);
         stream.ReadTimeout = 1000;
         stream.Open();
 
