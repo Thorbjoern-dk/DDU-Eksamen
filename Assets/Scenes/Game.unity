@@ -1461,7 +1461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &205208737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10620,15 +10620,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4619057366442227122, guid: ea5d3a536a1385e4e9dc56c420dca34a, type: 3}
       propertyPath: m_Color.b
-      value: 0.3207547
+      value: 0.3647059
       objectReference: {fileID: 0}
     - target: {fileID: 4619057366442227122, guid: ea5d3a536a1385e4e9dc56c420dca34a, type: 3}
       propertyPath: m_Color.g
-      value: 0.3207547
+      value: 0.76470596
       objectReference: {fileID: 0}
     - target: {fileID: 4619057366442227122, guid: ea5d3a536a1385e4e9dc56c420dca34a, type: 3}
       propertyPath: m_Color.r
-      value: 0.3207547
+      value: 0.37254903
       objectReference: {fileID: 0}
     - target: {fileID: 6929222324240489907, guid: ea5d3a536a1385e4e9dc56c420dca34a, type: 3}
       propertyPath: "D\xF8r1"
@@ -12664,7 +12664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1172113563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26290,6 +26290,18 @@ PrefabInstance:
     - target: {fileID: 5259225173325760665, guid: 1552034fbea6d844d8663f3c6748ea8e, type: 3}
       propertyPath: m_Name
       value: GhostFinalPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875742170534341620, guid: 1552034fbea6d844d8663f3c6748ea8e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875742170534341620, guid: 1552034fbea6d844d8663f3c6748ea8e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875742170534341620, guid: 1552034fbea6d844d8663f3c6748ea8e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 5875742170534341620, guid: 1552034fbea6d844d8663f3c6748ea8e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47531,6 +47543,10 @@ PrefabInstance:
     - target: {fileID: 1827982064682601818, guid: 4631c70d06ccb724c892dbee78bb9bab, type: 3}
       propertyPath: m_Name
       value: "Ark\xE6olog"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827982064682601818, guid: 4631c70d06ccb724c892dbee78bb9bab, type: 3}
+      propertyPath: m_TagString
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 2950822760032262768, guid: 4631c70d06ccb724c892dbee78bb9bab, type: 3}
       propertyPath: m_SpriteTilingProperty.border.x

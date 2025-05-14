@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1390231658881408912}
   m_Layer: 10
   m_Name: "Ark\xE6olog"
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,7 +186,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1390231658881408912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +206,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  bc: {fileID: 0}
   IsPlayer1: 1
   InGame: 1
 --- !u!1 &8144650101169223050
@@ -233,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 8144650101169223050}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.016, y: -0.442, z: 0}
+  m_LocalPosition: {x: 0.016, y: -0.521, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

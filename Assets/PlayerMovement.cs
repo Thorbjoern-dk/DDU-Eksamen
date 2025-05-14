@@ -35,12 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
         Jump();
-        // Debug animation
-        var clips = animator.GetCurrentAnimatorClipInfo(0);
-        if (clips.Length > 0)
-        {
-            Debug.Log("Aktiv animation: " + clips[0].clip.name);
-        }
+
 
 
     }
@@ -49,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveInput;
         if(IsPlayer1){
+            transform.localScale = new Vector3(2, 2, 2);
             moveInput = Input.GetAxis("Horizontal");
             if(InGame){
                 animator.SetFloat("Movement", Mathf.Abs(Input.GetAxis("Horizontal")));
@@ -56,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
             }
             bc.size = new Vector2(bc.size.x, 0.87f);
         } else{
+            transform.localScale = new Vector3(1.6f, 1.6f, 1.6f);
             moveInput = Input.GetAxis("Horizontal2");
             if(InGame){
                 animator.SetFloat("Movement", Mathf.Abs(Input.GetAxis("Horizontal2")));
@@ -83,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         
         if (Input.GetKeyDown(KeyCode.W) && isGrounded && IsPlayer1)
         {
