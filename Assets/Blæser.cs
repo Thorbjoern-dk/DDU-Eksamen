@@ -44,6 +44,7 @@ public class Blæser : MonoBehaviour
         
         if (other.CompareTag("Player2"))
         {
+            Debug.Log("SkubPige");
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
