@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class LoreScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public GameObject p1;
     public GameObject p2;
@@ -18,7 +17,6 @@ public class LoreScript : MonoBehaviour
         p3.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)){
@@ -44,3 +42,4 @@ public class LoreScript : MonoBehaviour
 
     }
 }
+
