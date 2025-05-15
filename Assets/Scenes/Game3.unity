@@ -1165,7 +1165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &378097066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4320,7 +4320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &774779136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15062,9 +15062,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1347138566}
     m_Modifications:
+    - target: {fileID: 2035650524745760137, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899501924198890677, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221532406857173181, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4681589252710017527, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
       propertyPath: m_Name
       value: "D\xF8dtGulv"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681589252710017527, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776730880371732435, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4784143875287383503, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
       propertyPath: m_LocalScale.x
@@ -15109,6 +15129,10 @@ PrefabInstance:
     - target: {fileID: 4784143875287383503, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882128455669014697, guid: 9b28f1659eb789e4c92031c1604b52cf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
