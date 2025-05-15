@@ -1024,6 +1024,7 @@ GameObject:
   - component: {fileID: 351932177}
   - component: {fileID: 351932176}
   - component: {fileID: 351932179}
+  - component: {fileID: 351932180}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1149,6 +1150,21 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &351932180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351932175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06df7fca5bfaa94992e336fcefe7116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "FysiskKomponentBev\xE6gelse": {fileID: 774779135}
+  "LokalBev\xE6gelse": {fileID: 378097065}
+  OnOffControlls: 0
 --- !u!1 &378097065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4320,7 +4336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &774779136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4639,15 +4655,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4259467351069571881, guid: 1ddb01dc6dbbd5d479cea06651724b98, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4259467351069571881, guid: 1ddb01dc6dbbd5d479cea06651724b98, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4259467351069571881, guid: 1ddb01dc6dbbd5d479cea06651724b98, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4259467351069571881, guid: 1ddb01dc6dbbd5d479cea06651724b98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14522,6 +14538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1347138566}
     m_Modifications:
+    - target: {fileID: 461913516993597983, guid: 4bf86d2ec70217846a06b54a121481d0, type: 3}
+      propertyPath: LevelName
+      value: baggrundshistorie
+      objectReference: {fileID: 0}
     - target: {fileID: 3097810855700563362, guid: 4bf86d2ec70217846a06b54a121481d0, type: 3}
       propertyPath: m_Name
       value: LevelFinish

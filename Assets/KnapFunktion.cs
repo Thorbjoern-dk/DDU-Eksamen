@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class KnapFunktion : MonoBehaviour
 {
     public void onClick() {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("baggrundshistorie");
     }
 
     

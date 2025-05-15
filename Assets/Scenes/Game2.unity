@@ -11715,7 +11715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &672387419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12747,7 +12747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &896773885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14730,6 +14730,7 @@ GameObject:
   - component: {fileID: 1340730180}
   - component: {fileID: 1340730179}
   - component: {fileID: 1340730182}
+  - component: {fileID: 1340730183}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14855,6 +14856,21 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1340730183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340730178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06df7fca5bfaa94992e336fcefe7116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "FysiskKomponentBev\xE6gelse": {fileID: 896773884}
+  "LokalBev\xE6gelse": {fileID: 672387418}
+  OnOffControlls: 0
 --- !u!1 &1350760989
 GameObject:
   m_ObjectHideFlags: 0
@@ -27068,11 +27084,11 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1340730181}
   - {fileID: 1631320422}
   - {fileID: 1075797729}
   - {fileID: 532488575}
   - {fileID: 1490909752}
-  - {fileID: 1340730181}
   - {fileID: 1464122330}
   - {fileID: 1027220381}
   - {fileID: 484268759}
