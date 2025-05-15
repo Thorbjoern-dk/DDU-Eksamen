@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game3.unity
     guid: f7706cb701dbc1f44bc5b2b27da3cd7e
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 0ff033c23a078a24081d40b0111aa2f5
+  - enabled: 1
+    path: Assets/Scenes/baggrundshistorie.unity
+    guid: af166bd58324a2e47b8f87272c5df7fd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
