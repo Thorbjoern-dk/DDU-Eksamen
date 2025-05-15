@@ -151,6 +151,7 @@ MonoBehaviour:
   p1: {fileID: 477825887}
   p2: {fileID: 305611577}
   p3: {fileID: 1572705991}
+  pNumber: 0
 --- !u!4 &121424291
 Transform:
   m_ObjectHideFlags: 0
@@ -340,12 +341,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u201CThe journey through the temple was long and tough; the layout was
-    chaotic, and nature had taken over completely. But when you finally stood before
-    a fountain filled with glowing water, you could hardly resist. The moment you
-    touched the water, you felt a deep rumble echo through the temple, and shortly
-    after, you began to feel your souls being slowly torn from your bodies and pulled
-    into the water.\u201D"
+  m_Text: The journey through the temple was long and tough; the layout was chaotic,
+    and nature had taken over completely. But when you finally stood before a fountain
+    filled with glowing water, you could hardly resist. The moment you touched the
+    water, you felt a deep rumble echo through the temple, and shortly after, you
+    began to feel your souls being slowly torn from your bodies and pulled into the
+    water.
 --- !u!222 &305611580
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -424,12 +425,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u201DIt was just another expedition \u2014 an overgrown ruin deep in
-    the forest, an ancient temple once worshipped by the local people \u2014 but
-    this time was different. Your goal, the Fountain of Youth, was said by local
-    legends and myths to lie at the heart of the temple. But when a mysterious spirit
-    cast a curse upon the forest, the temple vanished, and with it: the Fountain
-    of Youth.\u201D\r\r\n"
+  m_Text: "It was just another expedition \u2014 an overgrown ruin deep in the forest,
+    an ancient temple once worshipped by the local people \u2014 but this time was
+    different. Your goal, the Fountain of Youth, was said by local legends and myths
+    to lie at the heart of the temple. But when a mysterious spirit cast a curse
+    upon the forest, the temple vanished, and with it: the Fountain of Youth.\r\r\n"
 --- !u!222 &477825890
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -568,12 +568,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u201CThe curse severed your souls from the physical world and bound them
-    to the magic of the fountain. However, the Fountain of Youth has granted you
-    the power to control your own physical state, and you have discovered that you
-    can shift between three forms: human, ghost, and stone. With these newfound abilities,
+  m_Text: "The curse severed your souls from the physical world and bound them to
+    the magic of the fountain. However, the Fountain of Youth has granted you the
+    power to control your own physical state, and you have discovered that you can
+    shift between three forms: human, ghost, and stone. With these newfound abilities,
     you know that only together can you escape the temple \u2014 before your souls
-    belong to the spirit forever.\u201D"
+    belong to the spirit forever."
 --- !u!222 &1572705993
 CanvasRenderer:
   m_ObjectHideFlags: 0
